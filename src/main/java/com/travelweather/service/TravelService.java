@@ -35,5 +35,19 @@ public class TravelService {
 
         return destinations;
     }
+
+    public Destination addDestination(Destination destination) {
+        return destination;
+    }
+
+    public Destination updateDestination(Destination destination) {
+        return destination;
+    }
+
+    public String deleteDestination() {
+        return "Destination deleted.";
+    }
+
+
 }
 

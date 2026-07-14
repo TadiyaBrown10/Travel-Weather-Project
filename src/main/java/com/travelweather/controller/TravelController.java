@@ -2,8 +2,7 @@ package com.travelweather.controller;
 
 import com.travelweather.model.Destination;
 import com.travelweather.service.TravelService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +19,24 @@ public class TravelController {
     public List<Destination> getRecommendations() {
         return travelService.getRecommendedDestinations();
     }
+
+    @PostMapping("/travel/newplace")
+    public Destination addDestination(@RequestBody Destination destination) {
+        return travelService.addDestination(destination);
+
+    }
+
+    @PutMapping("/travel/update")
+    public Destination updateDestination(@RequestBody Destination destination) {
+        return travelService.updateDestination(destination);
+    }
+
+    @DeleteMapping("/travel/delete")
+    public String deleteDestination() {
+        return travelService.deleteDestination();
+    }
+
+
+
 }
 
