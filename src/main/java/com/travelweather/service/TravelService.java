@@ -20,6 +20,10 @@ public class TravelService {
     }
 
     // GET — All destinations
+    public List<Destination> getAllDestinations() {
+        return destinationDataService.getDestinations();
+    }
+    // GET — Recommendations
     public List<Destination> getRecommendedDestinations() {
         return destinationDataService.getDestinations();
     }

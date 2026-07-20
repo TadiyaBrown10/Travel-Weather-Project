@@ -25,6 +25,11 @@ public class TravelController {
     }
 
     // GET — All destinations
+    @GetMapping("/travel")
+    public List<Destination> getAllDestinations() {
+        return travelService.getAllDestinations();
+    }
+    // GET — Recommendations
     @GetMapping("/travel/recommendations")
     public List<Destination> getRecommendations() {
         return travelService.getRecommendedDestinations();
@@ -61,4 +66,3 @@ public class TravelController {
         return "Destination deleted: " + name;
     }
 }
-
